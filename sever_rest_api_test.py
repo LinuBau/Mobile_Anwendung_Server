@@ -1,5 +1,5 @@
 import random
-from flask import Flask, json, render_template_string, request, jsonify
+from flask import Flask, json, render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -15,6 +15,11 @@ def get_json_list1():
 @app.route('/json/', methods=['GET'])
 def get_json_list2():
     return jsonify(json_list)
+
+@app.route('/delete',methods = ['GET'])
+def delete_json_list():
+    json_list.clear()
+    return jsonify({"message":"JSON List wurde gelöscht"}),201
 
 # POST-Route: Fügt ein neues JSON-Objekt zur Liste hinzu
 @app.route('/json', methods=['POST'])
@@ -79,48 +84,8 @@ def create_list():
 
 @app.route('/panel')
 def control_panel():
-    html_content = '''
-    <!DOCTYPE html>
-    <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kontrollpanel</title>
-    </head>
-    <body>
-        <h1>Kontrollpanel für die Flask-App</h1>
-        
-        <!-- Button zum Abrufen der JSON-Liste -->
-        <form action="/json" method="get">
-            <button type="submit">JSON-Liste abrufen</button>
-        </form>
-        
-        <br>
+    return render_template('control_panel.html')
 
-        <!-- Button zum Erstellen von 50 Einträgen -->
-        <form action="/create/" method="get">
-            <button type="submit">50 JSON-Einträge erstellen</button>
-        </form>
-
-        <br>
-
-        <!-- Formular zum Hinzufügen eines einzelnen JSON-Eintrags -->
-        <form action="/json" method="post">
-            <label for="anzeigeName">AnzeigeName:</label>
-            <input type="text" id="anzeigeName" name="AnzeigeName" required><br><br>
-            
-            <label for="beschreibung">Beschreibung:</label>
-            <input type="text" id="beschreibung" name="Beschreibung" required><br><br>
-            
-            <label for="erstellerId">ErstellerId:</label>
-            <input type="number" id="erstellerId" name="erstellerId" required><br><br>
-            
-            <button type="submit">JSON-Eintrag hinzufügen</button>
-        </form>
-    </body>
-    </html>
-    '''
-    return render_template_string(html_content)
 
     
 
