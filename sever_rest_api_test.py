@@ -1,11 +1,13 @@
 import random
-from flask import Flask, json, render_template, request, jsonify
+from flask import Flask, json, render_template, render_template_string, request, jsonify
+
 
 app = Flask(__name__)
 
 # Liste zur Speicherung der JSON-Objekte
 json_list = []
 context = ('certificates/cert.pem', 'certificates/key.pem')
+data_path = "data.json"
 
 # GET-Route: Gibt die Liste der JSON-Dateien zurück
 @app.route('/json', methods=['GET'])
@@ -19,6 +21,7 @@ def get_json_list2():
 @app.route('/delete',methods = ['GET'])
 def delete_json_list():
     json_list.clear()
+    on_shutdown()
     return jsonify({"message":"JSON List wurde gelöscht"}),201
 
 # POST-Route: Fügt ein neues JSON-Objekt zur Liste hinzu
@@ -27,6 +30,7 @@ def add_json_to_list1():
     if request.is_json:
         new_json = request.get_json()
         json_list.append(new_json)
+        on_shutdown()
         return jsonify({"message": "JSON hinzugefügt!", "data": new_json}), 201
     else:
         return jsonify({"message": "Request ist kein JSON!"}), 400
@@ -36,6 +40,7 @@ def add_json_to_list2():
     if request.is_json:
         new_json = request.get_json()
         json_list.append(new_json)
+        on_shutdown()
         return jsonify({"message": "JSON hinzugefügt!", "data": new_json}), 201
     else:
         return jsonify({"message": "Request ist kein JSON!"}), 400
@@ -79,17 +84,32 @@ def create_list():
         }
         json_list.append(eintrag)
     
-   
+    on_shutdown()
     return jsonify({"message": "Json wurde hinzugefügt","data":json_list}),201
 
 @app.route('/panel')
 def control_panel():
     return render_template('control_panel.html')
 
+def on_shutdown():
+    with open(data_path,"w") as outfile:
+        json.dump(json_list,outfile,indent = 4)
+    return jsonify({"message":"JSON List wurde gelöscht"}),201        
 
-    
+def on_start():
+    with open(data_path,"r") as input:
+        data = json.loads(input.read())
+        json_list = json.dumps(data, indent = 4)
+        return json_list
+
+
+
+
 
     
 # Startet den Server
 if __name__ == '__main__':
+    json_list = on_start()
     app.run(host='0.0.0.0', port=5000,ssl_context = context)
+
+    
