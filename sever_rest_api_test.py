@@ -99,8 +99,7 @@ def on_shutdown():
 def on_start():
     with open(data_path,"r") as input:
         data = json.loads(input.read())
-        json_list = json.dumps(data, indent = 4)
-        return json_list
+        return data 
 
 
 
