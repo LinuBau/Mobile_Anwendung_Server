@@ -39,6 +39,8 @@ def add_json_to_list1():
             "AnzeigeName": send_json.get("AnzeigeName") ,
             "Beschreibung": send_json.get("Beschreibung") ,
             "erstellerId": send_json.get("erstellerId"),
+            "extraData": send_json.get("extraData"),
+            "tags": send_json.get("tags"),
             "timestamp": int(time.time() * 1000)
         }
         json_list.append(new_json)
@@ -192,15 +194,15 @@ def get_messages(user1_id, user2_id):
     
     chat =[]
     for message in chats[chat_id]:
-        chat.append({
+        m = {
             'sender' : message['sender'],
             'receiver': message['receiver'],
             'message': message['message']
-        })
-    
-    return jsonify({
-         chats[chat_id]
-    })
+        }
+        chat.append(m)
+    return jsonify(chat)
+
+
 @app.route('/getkeysWith/<user_id>',methods = ['GET'])
 def get_keys(user_id):
     user_id = int(user_id)
@@ -296,16 +298,24 @@ def on_start():
 # Startet den Server
 if __name__ == '__main__':
     json_list = on_start()
-    c=generate_chat_id(1001,5500)
+    c=generate_chat_id(1001,5537)
     message = {
         'sender': 1001,
-        'receiver': 5667,
+        'receiver': 5537,
+        'message': 'Hallü',
+        'timestamp': int(time.time() * 1000),  # Unix Timestamp in Millisekunden
+        'message_id': hash(c)  # Message-ID innerhalb des Chats
+    }
+    message1={
+        'sender': 5537,
+        'receiver': 1001,
         'message': 'Hallü',
         'timestamp': int(time.time() * 1000),  # Unix Timestamp in Millisekunden
         'message_id': hash(c)  # Message-ID innerhalb des Chats
     }
     chats[c] = []
     chats[c].append(message)
+    chats[c].append(message1)
 
     
     app.run(host='0.0.0.0', port=5000,ssl_context = context)
