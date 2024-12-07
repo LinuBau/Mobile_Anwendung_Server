@@ -17,6 +17,7 @@ base_Url = "./user_data"
 @app.route('/json', methods=['GET'])
 def get_json_list1():
     json_list = on_start()
+    print(len(json_list))
     return jsonify(json_list)
 
 @app.route('/json/', methods=['GET'])
@@ -318,6 +319,7 @@ if __name__ == '__main__':
     chats[c].append(message1)
 
     
-    app.run(host='0.0.0.0', port=5000,ssl_context = context)
+    #app.run(host='0.0.0.0', port=5000,ssl_context = context)
+    app.run(host='0.0.0.0', port=5000)
 
     
