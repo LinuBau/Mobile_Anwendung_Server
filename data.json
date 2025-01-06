@@ -40,13 +40,44 @@
         "timestamp": 1731384725234
     },
     {
-        "AnzeigeName": "test",
-        "Beschreibung": "<p dir=\"ltr\">test</p>\n",
-        "erstellerId": 5180,
-        "extraData": "Chat Test",
-        "tags": [
-            -1
-        ],
-        "timestamp": 1736187179279
+        "AnzeigeName": "Vorlesungstutorium MIT",
+        "Beschreibung": "<p dir=\"ltr\">Ich biete ein Tutorium zur Vorlesung \"Einfuhrung in die Informatik\" an. Bei Interesse bitte melden.</p>\n",
+        "erstellerId": 4501,
+        "extraData": "Keine Vorkenntnisse erforderlich",
+        "tags": [1],
+        "timestamp": 1731484725234
+    },
+    {
+        "AnzeigeName": "WG-Zimmer in der Naehe der Uni",
+        "Beschreibung": "<p dir=\"ltr\">Schickes Zimmer in einer 4er-WG wird ab Februar frei. Super Anbindung an den Campus und Stadtzentrum.</p>\n",
+        "erstellerId": 5324,
+        "extraData": "Miete: 350€/Monat",
+        "tags": [2],
+        "timestamp": 1731584725234
+    },
+    {
+        "AnzeigeName": "Kellerraum zu vermieten",
+        "Beschreibung": "<p dir=\"ltr\">Ich vermiete einen Kellerraum zur Aufbewahrung von Moebeln und anderen Dingen. Preis verhandelbar.</p>\n",
+        "erstellerId": 6253,
+        "extraData": "Raum ist trocken und abschliessbar",
+        "tags": [2],
+        "timestamp": 1731684725234
+    },
+    {
+        "AnzeigeName": "Buecher zum Verkauf",
+        "Beschreibung": "<p dir=\"ltr\">Ich verkaufe eine Sammlung an Fachbuechern fuer Informatik und Mathematik. Preis nach Vereinbarung.</p>\n",
+        "erstellerId": 7125,
+        "extraData": "Alle Buecher in gutem Zustand",
+        "tags": [0],
+        "timestamp": 1731784725234
+    },
+    {
+        "AnzeigeName": "Fahrrad zu verschenken",
+        "Beschreibung": "<p dir=\"ltr\">Ich verschenke ein gebrauchtes, aber funktionstuechtiges Fahrrad. Bei Interesse bitte melden.</p>\n",
+        "erstellerId": 8034,
+        "extraData": "Abholung in der Innenstadt",
+        "tags": [0],
+        "timestamp": 1731884725234
     }
+    
 ]
