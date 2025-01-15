@@ -1,0 +1,83 @@
+[
+    {
+        "AnzeigeName": "WG-Zimmer frei",
+        "Beschreibung": "<p dir=\"ltr\">In unserer gemuetlichen 3er-WG ist ein Zimmer ab sofort zu vergeben. Bei Interesse gerne melden!</p>\n",
+        "erstellerId": 1023,
+        "extraData": "Kein Haustier erlaubt",
+        "tags": [
+            2
+        ],
+        "timestamp": 1731084725234
+    },
+    {
+        "AnzeigeName": "Nachhilfe in Mathe",
+        "Beschreibung": "<p dir=\"ltr\">Ich biete Nachhilfe in Mathematik f\uff83\uff7cr Schueler und Studierende an. Alle Themenbereiche bis zum Abitur sind abgedeckt.</p>\n",
+        "erstellerId": 1745,
+        "extraData": "Preis: 15\u7ac4\uff6c/Stunde",
+        "tags": [
+            1
+        ],
+        "timestamp": 1731184725234
+    },
+    {
+        "AnzeigeName": "Fahrrad zu verkaufen",
+        "Beschreibung": "<p dir=\"ltr\">Verkaufe mein gut erhaltenes Fahrrad. Es hat keine Schaeden und wurde regelmae\uff83\u6b83g gewartet.</p>\n",
+        "erstellerId": 2031,
+        "extraData": "Preis: 100\u7ac4\uff6c",
+        "tags": [
+            0
+        ],
+        "timestamp": 1731284725234
+    },
+    {
+        "AnzeigeName": "Mitfahrgelegenheit nach Berlin",
+        "Beschreibung": "<p dir=\"ltr\">Ich fahre am kommenden Freitag nach Berlin und habe noch Platz f\uff83\uff7cr eine Person. Abfahrt ist um 12 Uhr.</p>\n",
+        "erstellerId": 3654,
+        "extraData": "Kosten: 20\u7ac4\uff6c",
+        "tags": [
+            0
+        ],
+        "timestamp": 1731384725234
+    },
+    {
+        "AnzeigeName": "Vorlesungstutorium MIT",
+        "Beschreibung": "<p dir=\"ltr\">Ich biete ein Tutorium zur Vorlesung \"Einfuhrung in die Informatik\" an. Bei Interesse bitte melden.</p>\n",
+        "erstellerId": 4501,
+        "extraData": "Keine Vorkenntnisse erforderlich",
+        "tags": [1],
+        "timestamp": 1731484725234
+    },
+    {
+        "AnzeigeName": "WG-Zimmer in der Naehe der Uni",
+        "Beschreibung": "<p dir=\"ltr\">Schickes Zimmer in einer 4er-WG wird ab Februar frei. Super Anbindung an den Campus und Stadtzentrum.</p>\n",
+        "erstellerId": 5324,
+        "extraData": "Miete: 350€/Monat",
+        "tags": [2],
+        "timestamp": 1731584725234
+    },
+    {
+        "AnzeigeName": "Kellerraum zu vermieten",
+        "Beschreibung": "<p dir=\"ltr\">Ich vermiete einen Kellerraum zur Aufbewahrung von Moebeln und anderen Dingen. Preis verhandelbar.</p>\n",
+        "erstellerId": 6253,
+        "extraData": "Raum ist trocken und abschliessbar",
+        "tags": [2],
+        "timestamp": 1731684725234
+    },
+    {
+        "AnzeigeName": "Buecher zum Verkauf",
+        "Beschreibung": "<p dir=\"ltr\">Ich verkaufe eine Sammlung an Fachbuechern fuer Informatik und Mathematik. Preis nach Vereinbarung.</p>\n",
+        "erstellerId": 7125,
+        "extraData": "Alle Buecher in gutem Zustand",
+        "tags": [0],
+        "timestamp": 1731784725234
+    },
+    {
+        "AnzeigeName": "Fahrrad zu verschenken",
+        "Beschreibung": "<p dir=\"ltr\">Ich verschenke ein gebrauchtes, aber funktionstuechtiges Fahrrad. Bei Interesse bitte melden.</p>\n",
+        "erstellerId": 8034,
+        "extraData": "Abholung in der Innenstadt",
+        "tags": [0],
+        "timestamp": 1731884725234
+    }
+    
+]
