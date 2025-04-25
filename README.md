@@ -11,7 +11,7 @@ Der Server wurde mit Flask (Python) entwickelt und verarbeitet HTTP-Requests der
 Er übernimmt die Verwaltung und Bereitstellung von Beiträgen sowie Chatnachrichten und fungiert damit als zentrale Instanz (Arbiter) für den Datenaustausch.
 
 Die wichtigsten Funktionen:
-- Entgegennahme und Speicherung von Beiträgen (z. B. Aushänge)
+- Entgegennahme und Speicherung von Beiträgen
 - Verwaltung von Chatnachrichten zwischen Nutzenden
 - Schnittstelle für die mobile App zur Datenabfrage und -übermittlung
 
